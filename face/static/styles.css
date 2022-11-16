@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Montserrat',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+}
+.container {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0 37px;
+}
+
+.form form div{
+    margin: 20px 0;
+}
+.name {
+    width: 80%;
+    padding: 5px;
+}
+button {
+    padding: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+}
+.success, .form, .error{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-weight: 500;
+}
+.error p{
+    color: #ff0000;
+}
+.success a, .error a {
+    padding: 3px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0 0 0;
+}
+.success a:hover, .error a:hover {
+    transform: scale(1.05);
+}
+
+
+@media (prefers-color-scheme: light) {
+    * {
+        color: #000;
+    }
+    .success a,.error a {
+        border: #000 1px solid;
+    }
+    button {
+        border: #000 solid 1px;
+    }
+    button:hover {
+        transform: scale(1.05);
+    }
+    .name {
+        color: #000;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: #f5f5f5;
+    }
+    html, body {
+        background: #000;
+    }
+    .success a,.error a {
+        border: #f5f5f5 1px solid;
+    }
+    button {
+        border: #f5f5f5 solid 1px;
+    }
+    button:hover {
+        transform: scale(1.05);
+    }
+    .name {
+        color: #000;
+    }
+}

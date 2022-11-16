@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Face register</title>
+    <link href="{% static 'styles.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>Register</h1>
+        <p>Add atleast 10 pictures for best results, no hats or caps</p>
+        <form
+          id="post_form"
+          action="{% url 'face:home' %}"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <div>
+            <input
+              name="name"
+              type="text"
+              id="user-name"
+              placeholder="Enter your name"
+              class="name"
+            />
+          </div>
+          <div>
+            <input
+              type="file"
+              name="images"
+              class="images"
+              id="user-image"
+              multiple="multiple"
+            />
+          </div>
+          <div>
+            <button type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
